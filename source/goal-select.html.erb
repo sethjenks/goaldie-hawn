@@ -1,0 +1,21 @@
+<header>
+  <div class="header-container">
+    <div class="goal-header">
+      <h1>What can Nav help you with?</h1>
+      <p>Select an opton that best fits your goals right now.</p>
+    </div>
+</header>
+<main>
+  <% app.data.table_1.records.each do |name| %>
+  <a href="/register/<%= name.id %>">
+    <div class="option-select">
+      <div class="option-select__icon">
+        <img src="/img/color.png" alt="">
+      </div>
+      <div>
+        <h3><%= name.fields.Name %></h3>
+      </div>
+    </div>
+    </a>
+  <% end %>
+</main>

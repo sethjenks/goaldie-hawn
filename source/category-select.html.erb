@@ -1,0 +1,21 @@
+<header>
+  <div class="header-container">
+    <div class="goal-header">
+      <h1>What can Nav help you with?</h1>
+      <p>Select an opton that best fits your goals right now.</p>
+    </div>
+</header>
+<main>
+  <% app.data.table_3.records.each do |name| %>
+  <a href="/time-in-business/<%= name.id %>">
+    <div class="category-select">
+      <div class="category-select__icon">
+        <img src="/img/color.png" alt="">
+      </div>
+      <div>
+        <h2><%= name.fields.Name %></h2>
+      </div>
+    </div>
+    </a>
+  <% end %>
+</main>

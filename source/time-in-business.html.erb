@@ -1,0 +1,25 @@
+---
+title: "Time in Business"
+---
+
+<% category = app.data.table_3.records.select{|category| category.id == category_name}[0] %>
+
+<header>
+  <div class="header-container">
+    <div class="goal-header">
+      <p><%= category.fields.Name %></p>
+      <h1>How long have you been in business?</h1>
+      <h4>This will help us provide relevant options for you.</h4>
+    </div>
+</header>
+<main>
+  <% app.data.table_4.records.each do |name| %>
+  <a href="/register/<%= category_name %>/<%= name.id %>">
+    <div class="category-select">
+      <div>
+        <h2><%= name.fields.Name %></h2>
+      </div>
+    </div>
+    </a>
+  <% end %>
+</main>

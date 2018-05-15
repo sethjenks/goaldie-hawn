@@ -1,0 +1,42 @@
+---
+layout: "signin"
+---
+
+<% category = app.data.table_3.records.select{|category| category.id == category_id}[0] %>
+<% tib = app.data.table_4.records.select{|tib| tib.id == tib_name}[0] %>
+
+
+<main>
+  <div class="container-register">
+    <div class="register-form-container">
+      <header>
+        <div class="header-container">
+          <div class="goal-header">
+
+            <h2>Let's start by creating your Nav account.</h2>
+
+          </div>
+      </header>
+        <form id="myForm" action="#" method="post">
+          <div>
+
+            <input type="text" name="email" id="email" placeholder="Email" value="" tabindex="1">
+          </div>
+          <div>
+
+            <input type="password" name="password" id="password" placeholder="Password" value="" tabindex="2">
+          </div>
+        </form>
+        <a class="btn-xlarge" href="/step/<%= category_id %>/<%= tib_name %>">Let's get started</a>
+    </div>
+    <div class="register-info-container">
+        <div class="header-container">
+          <div class="goal-header">
+            <h3>We have a plan to help you</h3>
+            <h2><%= category.fields.Name %>
+            for a business that's <%= tib.fields.Name %> old.</h2>
+          </div>
+        </div>
+    </div>
+  </div>
+</main>

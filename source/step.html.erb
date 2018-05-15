@@ -1,0 +1,38 @@
+
+<% category = app.data.table_3.records.select{|category| category.id == category_id}[0] %>
+
+<% tib = app.data.table_4.records.select{|tib| tib.id == tib_name}[0] %>
+
+<main>
+  <header>
+    <div class="header-container">
+      <div class="goal-icon">
+
+      </div>
+      <div class="goal-header">
+        <p>Welcome! Your current goal is:</p>
+        <h1><%= category.fields.Name %></h1>
+        <p>Here's what you need to do next. </p>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="step-card">
+
+    <div class="">
+      <div>
+        <h2>Step 1 Title</h2>
+      </div>
+    </div>
+
+    <p>Step Copy</p>
+    <a class="step-cta" target="_blank" href="">Step CTA</a>
+    </div>
+
+    <hr style="">
+    <h1>Credit scores</h1>
+    <div>
+      <img class="img-fluid" src="../../../images/dash-junk.png" alt="">
+    </div>
+</main>
