@@ -20,7 +20,7 @@ The key pieces that make this work are:
   [data-files]: https://middlemanapp.com/advanced/data_files/
   [config]: https://github.com/tysongach/middleman-prototype-with-airtable-data/blob/master/config.rb#L23-L31
   [loop]: https://github.com/tysongach/middleman-prototype-with-airtable-data/blob/master/source/index.html.erb#L6-L12
-  [output]: https://tysongach.github.io/middleman-prototype-with-airtable-data/
+  [output]: https://nav.technology
 
 ## Setup
 
